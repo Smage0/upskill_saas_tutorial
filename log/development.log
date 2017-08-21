@@ -1733,3 +1733,471 @@ DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is depreca
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/users/4" for 70.44.175.215 at 2017-08-21 17:28:13 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (116.6ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_attached_file' for #<Class:0x007f20625c5538>):
+    1: <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+    2: <%= @user.profile.job_title %>
+    3: <% if current_user.plan_id == 2 %>
+    4:   <%= @user.profile.phone_number %><br/>
+  
+app/models/profile.rb:3:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___645923394914965223_69888347450180'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+Started GET "/users/4" for 70.44.175.215 at 2017-08-21 17:30:56 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_attached_file' for #<Class:0x007f20583a4ee8>):
+    1: <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+    2: <%= @user.profile.job_title %>
+    3: <% if current_user.plan_id == 2 %>
+    4:   <%= @user.profile.phone_number %><br/>
+  
+app/models/profile.rb:3:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___645923394914965223_69888450317360'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:31:03 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 107ms (Views: 96.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 70.44.175.215 at 2017-08-21 17:31:06 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZV8ad4boE21b5sbaj4WHAmkiutpbBorSmi1dt3yZl/fi2o5eS0H+49lKFroHmQVHJRumpCSWJmt2OCf2M/+XjQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:31:06 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up?plan=1" for 70.44.175.215 at 2017-08-21 17:31:07 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Parameters: {"plan"=>"1"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_basic_form.html.erb (2.9ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 70.44.175.215 at 2017-08-21 17:31:21 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BgRqPB511TnzfxOjGJSVk4I2gNx/rae6a3wCA93YFOccCBgbTU7Ul6kW44F9KaZVz7Pir2A9eLG4+e5sFxX4DA==", "plan"=>"1", "user"=>{"email"=>"jane.smith@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.smith@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.smith@example.com"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "plan_id") VALUES (?, ?, ?, ?, ?)[0m  [["email", "jane.smith@example.com"], ["encrypted_password", "$2a$11$DgNEz2CpBI4PEJWBVflB6.DvaAWlQjbtCCrLxvDP1cHo/qp94bMz6"], ["created_at", 2017-08-21 17:31:21 UTC], ["updated_at", 2017-08-21 17:31:21 UTC], ["plan_id", 1]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-21 17:31:21 UTC], ["last_sign_in_at", 2017-08-21 17:31:21 UTC], ["current_sign_in_ip", "70.44.175.215"], ["last_sign_in_ip", "70.44.175.215"], ["updated_at", 2017-08-21 17:31:21 UTC], ["id", 5]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/
+Completed 302 Found in 180ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:31:21 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5/profile/new" for 70.44.175.215 at 2017-08-21 17:31:23 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"5"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `has_attached_file' for #<Class:0x00000004033c80>):
+  
+app/models/profile.rb:3:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+Started GET "/users/5/profile/new" for 70.44.175.215 at 2017-08-21 17:34:11 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"5"}
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `before_avater_post_process' for #<Class:0x00000005c035a0>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.5ms)
+Started GET "/users/5/" for 70.44.175.215 at 2017-08-21 17:34:58 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (84.2ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `before_avater_post_process' for #<Class:0x000000048b9fd0>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+    1: <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+    2: <%= @user.profile.job_title %>
+    3: <% if current_user.plan_id == 2 %>
+    4:   <%= @user.profile.phone_number %><br/>
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3483839762360030785_45837540'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.8ms)
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:35:06 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 394ms (Views: 378.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for 70.44.175.215 at 2017-08-21 17:35:09 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CI05aBodecTWrJg69op+Ii/AFyBGsJq37yka/d/XzCVt+uzXpSVnTrxnogXJTu9jil19OfvaIvDsD6yFfz+L0w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/
+Completed 302 Found in 31ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:35:09 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 188ms (Views: 185.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 70.44.175.215 at 2017-08-21 17:35:10 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 235ms (Views: 233.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:35:21 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up?plan=1" for 70.44.175.215 at 2017-08-21 17:35:22 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Parameters: {"plan"=>"1"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_basic_form.html.erb (3.6ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 157ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 70.44.175.215 at 2017-08-21 17:35:30 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZIPWp2Cpf4BfYEcWGHIfIolwmy3Ju0AVA2dtV1D5neUrnqLlS0NzqQaFxjaUGhhH6BLu2Wm8WPHRJ5YhVHXzw==", "plan"=>"1", "user"=>{"email"=>"smith@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "smith@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "smith@example.com"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "plan_id") VALUES (?, ?, ?, ?, ?)[0m  [["email", "smith@example.com"], ["encrypted_password", "$2a$11$YRwkumD5LhcRccblWsiNV.CzzQ89MYAO85nZ4NPaUgZjhJQHm4s8y"], ["created_at", 2017-08-21 17:35:30 UTC], ["updated_at", 2017-08-21 17:35:30 UTC], ["plan_id", 1]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-21 17:35:30 UTC], ["last_sign_in_at", 2017-08-21 17:35:30 UTC], ["current_sign_in_ip", "70.44.175.215"], ["last_sign_in_ip", "70.44.175.215"], ["updated_at", 2017-08-21 17:35:30 UTC], ["id", 6]]
+  [1m[35m (43.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/
+Completed 302 Found in 263ms (ActiveRecord: 57.1ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-21 17:35:30 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/6/profile/new" for 70.44.175.215 at 2017-08-21 17:35:33 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"6"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `before_avater_post_process' for #<Class:0x007fc2812d6d38>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+Started GET "/users/6/profile/new" for 70.44.175.215 at 2017-08-21 17:39:18 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"6"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `before_avater_post_process' for #<Class:0x00000005e70310>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.0ms)
+Started GET "/users/6/profile/new" for 70.44.175.215 at 2017-08-21 17:39:21 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"6"}
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `before_avater_post_process' for #<Class:0x00000005d993b0>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/6/profile/new" for 70.44.175.215 at 2017-08-21 17:41:54 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"6"}
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `before_avater_post_process' for #<Class:0x00000005f97978>
+Did you mean?  before_avatar_post_process
+               before_post_process):
+  
+app/models/profile.rb:6:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/profiles_controller.rb:6:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.9ms)
+Started GET "/users/6/profile/new" for 70.44.175.215 at 2017-08-21 17:43:02 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"6"}
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (53.9ms)
+  Rendered profiles/new.html.erb within layouts/application (56.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 553ms (Views: 517.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users/6/profile" for 70.44.175.215 at 2017-08-21 17:45:19 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"majS54R1bX4Bf+KYmOPgFmXAPvDNb+x2tEtSt+AO4nKqWdnQondfQ73nMg5KkLOjm2BENNkRXyyypoTweITF+Q==", "profile"=>{"first_name"=>"Marry", "last_name"=>"Smith", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f87e4433c08 @tempfile=#<Tempfile:/tmp/RackMultipart20170821-2437-1h5dfs2.jpg>, @original_filename="0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[avatar]\"; filename=\"0.jpg\"\r\nContent-Type: image/jpeg\r\n">, "job_title"=>"Developer", "phone_number"=>"555-555-5555", "contact_email"=>"smith@example.com", "description"=>"Hi, I'm a web dev."}, "commit"=>"Update Profile", "user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]' -auto-orient -resize "300x300>" '/tmp/71cb57e599a0f4402279674e3cc7249d20170821-2437-1wbh531'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1o9kz8t.jpg[0]' -auto-orient -resize "100x100>" '/tmp/71cb57e599a0f4402279674e3cc7249d20170821-2437-1klzfup'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/cfcd208495d565ef66e7dff9f98764da20170821-2437-1iuiss7.jpg'
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "first_name", "last_name", "job_title", "phone_number", "contact_email", "description", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 6], ["first_name", "Marry"], ["last_name", "Smith"], ["job_title", "Developer"], ["phone_number", "555-555-5555"], ["contact_email", "smith@example.com"], ["description", "Hi, I'm a web dev."], ["created_at", 2017-08-21 17:45:19 UTC], ["updated_at", 2017-08-21 17:45:19 UTC], ["avatar_file_name", "0.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 24127], ["avatar_updated_at", 2017-08-21 17:45:19 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/users/6
+Completed 302 Found in 348ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/users/6" for 70.44.175.215 at 2017-08-21 17:45:19 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6" for 70.44.175.215 at 2017-08-21 17:47:37 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.5ms)
+
+
