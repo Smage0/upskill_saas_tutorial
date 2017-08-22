@@ -2599,3 +2599,361 @@ Processing by Users::RegistrationsController#new as HTML
 Completed 200 OK in 106ms (Views: 92.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:13:48 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up?plan=2" for 70.44.175.215 at 2017-08-22 00:13:53 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Parameters: {"plan"=>"2"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/_pro_form.html.erb (5.7ms)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 70.44.175.215 at 2017-08-22 00:14:30 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jTkM1BdtuHQ6y512BfIyjRh34Pv4JZA0wPQ4/UqYbxFVgAZL7TP4c070g2E+5Jqa3P2z+OxF1KZGWEaahHu2CQ==", "plan"=>"2", "user"=>{"email"=>"pro@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "stripe_card_token"=>"tok_1AtQ2LJYfN9MswdIkaXXzSRB"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pro@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pro@example.com"], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pro@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "plan_id", "stripe_customer_token") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "pro@example.com"], ["encrypted_password", "$2a$11$1ajNePZcE9J38PktpvtFiO/pKTOjzKb9p.2kr9gsMTeYuTdYn2lfy"], ["created_at", 2017-08-22 00:14:32 UTC], ["updated_at", 2017-08-22 00:14:32 UTC], ["plan_id", 2], ["stripe_customer_token", "cus_BFvuXo5IEFoyQf"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-22 00:14:32 UTC], ["last_sign_in_at", 2017-08-22 00:14:32 UTC], ["current_sign_in_ip", "70.44.175.215"], ["last_sign_in_ip", "70.44.175.215"], ["updated_at", 2017-08-22 00:14:32 UTC], ["id", 1]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/
+Completed 302 Found in 2156ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:14:32 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up?plan=1" for 70.44.175.215 at 2017-08-22 00:14:52 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Parameters: {"plan"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://rails-workspace-smage.c9users.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:14:52 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 101ms (Views: 96.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:19:26 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/pages/home.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/pages/home.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.2ms)
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:19:59 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:15: syntax error, unexpected '<', expecting ')'
+        </div>
+         ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:16: unknown regexp options - dv
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:17: syntax error, unexpected '<'
+    <% else );@output_buffer.safe_append='
+     ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/pages/home.html.erb:15: syntax error, unexpected '<', expecting ')'
+app/views/pages/home.html.erb:16: unknown regexp options - dv
+app/views/pages/home.html.erb:17: syntax error, unexpected '<'
+app/views/pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/pages/home.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:21:16 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/pages/home.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.9ms)
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:22:22 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:17: syntax error, unexpected '<', expecting ')'
+          <% end );@output_buffer.safe_append='
+           ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:20: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;     else 
+                  ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/pages/home.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/pages/home.html.erb:20: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/pages/home.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/pages/home.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.1ms)
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:23:19 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:17: syntax error, unexpected '<', expecting ')'
+          <% end );@output_buffer.safe_append='
+           ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:20: syntax error, unexpected keyword_else, expecting keyword_end
+'.freeze;     else 
+                  ^
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/saasapp/app/views/pages/home.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/pages/home.html.erb:17: syntax error, unexpected '<', expecting ')'
+app/views/pages/home.html.erb:20: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/pages/home.html.erb:39: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/pages/home.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:23:28 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/profile/new" for 70.44.175.215 at 2017-08-22 00:23:42 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (10.8ms)
+  Rendered profiles/new.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/1/profile" for 70.44.175.215 at 2017-08-22 00:24:27 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O6okOrJ0P410czvHsGH31Rmgmlz08iJz7CmfX0fxnQau6iJZY6LQZ1u38VOhu0Ts57jfaCj6vmO33Tm5sHdf/g==", "profile"=>{"first_name"=>"Jane", "last_name"=>"Smith", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fcd4c012018 @tempfile=#<Tempfile:/tmp/RackMultipart20170822-2844-c1bbgv.jpg>, @original_filename="0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[avatar]\"; filename=\"0.jpg\"\r\nContent-Type: image/jpeg\r\n">, "job_title"=>"Entrepreneur", "phone_number"=>"555-555-5555", "contact_email"=>"pro@example.com", "description"=>"Hi, I'm Jane Smith. I'm an entrepreneur who loves technology! Here to meet like-minded people!"}, "commit"=>"Update Profile", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]' -auto-orient -resize "300x300>" '/tmp/d750fc5a6eec4a7f5b80bca2b1f4e4f720170822-2844-eu9owu'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]'
+Command :: convert '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-tref95.jpg[0]' -auto-orient -resize "100x100>" '/tmp/d750fc5a6eec4a7f5b80bca2b1f4e4f720170822-2844-duztzu'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/cfcd208495d565ef66e7dff9f98764da20170822-2844-f7n5sz.jpg'
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "profiles" ("user_id", "first_name", "last_name", "job_title", "phone_number", "contact_email", "description", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["first_name", "Jane"], ["last_name", "Smith"], ["job_title", "Entrepreneur"], ["phone_number", "555-555-5555"], ["contact_email", "pro@example.com"], ["description", "Hi, I'm Jane Smith. I'm an entrepreneur who loves technology! Here to meet like-minded people!"], ["created_at", 2017-08-22 00:24:27 UTC], ["updated_at", 2017-08-22 00:24:27 UTC], ["avatar_file_name", "0.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 24127], ["avatar_updated_at", 2017-08-22 00:24:27 UTC]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-workspace-smage.c9users.io/users/1
+Completed 302 Found in 400ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/users/1" for 70.44.175.215 at 2017-08-22 00:24:27 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:24:47 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 102.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:24:48 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 70.44.175.215 at 2017-08-22 00:24:51 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:24:52 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:26:47 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:26:50 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 70.44.175.215 at 2017-08-22 00:28:00 +0000
+Cannot render console from 70.44.175.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlan Load (0.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
